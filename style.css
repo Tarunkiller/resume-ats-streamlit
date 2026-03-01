@@ -1,0 +1,129 @@
+/* Base modern aesthetic */
+:root {
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+}
+
+/* Hide Streamlit components we don't need */
+#MainMenu {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+/* Custom Panel / Card styling */
+.stCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+}
+
+/* Enhancing buttons */
+div.stButton>button {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    padding: 0.5rem 1rem !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease-in-out !important;
+    width: 100%;
+}
+
+div.stButton>button:hover {
+    background-color: var(--primary-hover) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+}
+
+/* Secondary/Outline buttons */
+div.stButton.secondary>button {
+    background-color: transparent !important;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+}
+
+div.stButton.secondary>button:hover {
+    background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Form inputs styling */
+div[data-testid="stTextInput"]>div>div>input {
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.6rem 1rem;
+}
+
+div[data-testid="stTextInput"]>div>div>input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* File Uploader styling */
+div[data-testid="stFileUploader"] {
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.02);
+    transition: all 0.2s ease;
+}
+
+div[data-testid="stFileUploader"]:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+.title-gradient {
+    background: linear-gradient(to right, #60a5fa, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Progress / Score Circle */
+.score-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.score-high {
+    background: conic-gradient(#10b981 var(--score), rgba(255, 255, 255, 0.1) 0);
+}
+
+.score-med {
+    background: conic-gradient(#f59e0b var(--score), rgba(255, 255, 255, 0.1) 0);
+}
+
+.score-low {
+    background: conic-gradient(#ef4444 var(--score), rgba(255, 255, 255, 0.1) 0);
+}
+
+/* Suggestions styling */
+.suggestion-item {
+    background-color: rgba(20, 184, 166, 0.15);
+    border-left: 4px solid #14b8a6;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: #e2e8f0;
+}
